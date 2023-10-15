@@ -4,17 +4,10 @@ import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
 
 
-//primeste props de la  parent App
-// are children ContactForm + TileList
-//props pt TileList : contacts, care l-a primit de la parent
-//props pt ContactForm : name, setName...handleSubmit (foloseste addContact de la parent)
+// parent App
+// children ContactForm + TileList
 export const ContactsPage = ({contacts, addContact}) => {
-  /*
-  Define state variables for 
-  contact info and duplicate check
-  */
- // astea le vom introduce in formular, de aici din parent controla state of form
- // astea puteau fi declarate in ContactForms, dar folosim separate of concerns
+  /* state variables for  contact info and duplicate check */
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -22,13 +15,7 @@ export const ContactsPage = ({contacts, addContact}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data
-    if the contact name is not a duplicate
-    */
-   // aici verifcam daca deja in contacts este noul contact ce vrem sa-l adaugam, 
-   //nu in functia addContact. aceea e pt a face update la state contacts
-  
+    /*Add contact info and clear data if the contact name is not a duplicate */
     if (!duplicate){
       addContact(name, phone, email);
       // clear data after submision
@@ -39,10 +26,7 @@ export const ContactsPage = ({contacts, addContact}) => {
       }  
   };
 
-  /*
-  Using hooks, check for contact name in the 
-  contacts array variable in props
-  */
+  /* check for contact name in the contacts array variable in props */
   useEffect(() => {
     const nameIsDuplicate = () => {
       const found = contacts.find((contact) => contact.name === name);
