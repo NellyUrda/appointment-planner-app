@@ -1,7 +1,7 @@
 import React from "react";
 
 
-// primeste props de la parent TileList
+//  parent TileList
 export const Tile = ({dataInput}) => {
   return (
     <div className="tile-container">
