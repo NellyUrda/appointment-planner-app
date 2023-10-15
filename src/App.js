@@ -5,21 +5,13 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 import { useState } from "react";
 
-// app e parent pt ContactsPage si AppointmentPage
+// parent for ContactsPage and AppointmentPage
 function App() {
-  /*
-  Define state variables for 
-  contacts and appointments 
-  */
- // contacts si appointments este un array of objects
+  /*state variables for contacts and appointments */
   const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
 
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
- 
+  /*functions to add data to contacts and appointments */
   const addContact = (name, phoneNumber,email)=>{
     let contact = {};
     contact.name= name;
