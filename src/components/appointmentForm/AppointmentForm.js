@@ -1,14 +1,7 @@
 import React from "react";
 import { ContactPicker } from "../contactPicker/ContactPicker";
 
-
-/*
-const getContactNames = () => {
-  return contacts.map((contact) => contact.name);
-};
-*/
-
-// child la AppointmentPage
+// child for AppointmentPage
 export const AppointmentForm = ({
   contacts,
   title,
