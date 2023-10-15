@@ -3,12 +3,9 @@ import React, { useState } from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
-// parent pt AppointmentForm si TileList
+// parent for AppointmentForm and TileList
 export const AppointmentsPage = ({appointments, addAppointment, contacts}) => {
-  /*
-  Define state variables for 
-  appointment info
-  */
+  /*state variables for appointment info */
   const [title, setTitle] = useState("");
   const [contact,setContact] = useState("");
   const [date, setDate] = useState("");
@@ -16,9 +13,7 @@ export const AppointmentsPage = ({appointments, addAppointment, contacts}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
+    /* Add contact info and clear data  */
    addAppointment(title, contact, date, time);
    setTitle("");
    setContact("");
