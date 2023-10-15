@@ -2,7 +2,7 @@ import React from "react";
 import { Tile } from "../tile/Tile";
 
 
-// primeste prop de la parent ContactPage si parent Appointments
+// child for ContactPage and Appointments
 export const TileList = ({datasInputs}) => {
   return (
     <div>
