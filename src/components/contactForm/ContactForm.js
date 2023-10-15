@@ -1,8 +1,5 @@
 import React from "react";
 
-// primeste props de la parent ContactsPage
-// toata logica de la useState() pt a controla inputs  o implementam in parent
-// la fel si cand apasam butonul
 export const ContactForm = ({
   name,
   setName,
