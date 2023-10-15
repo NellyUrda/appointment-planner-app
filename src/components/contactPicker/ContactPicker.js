@@ -1,6 +1,6 @@
 import React from "react";
 
-// child pt AppointmentForm
+// child for AppointmentForm
 export const ContactPicker = ({contacts, onChange, value, name}) => {
   return (
     <>
